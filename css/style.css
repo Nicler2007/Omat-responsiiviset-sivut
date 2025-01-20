@@ -1,53 +1,6 @@
 
 
-/* Tyylit Headquarter sivuille eli tällä hetkellä ikoni sivuille*/
+/* Tyylit sivuille */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url(https://m.media-amazon.com/images/I/71HEZBorXiL._AC_UF1000,1000_QL80_.jpg) no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-.text-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Valkoinen laatikko, hieman läpinäkyvä */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    text-align: center;
-}
 
-        /* Yhteiset tyylit tekstilaatikoille */
-.text-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Valkoinen, läpinäkyvä tausta */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Lisää väliä alapuolelle */
-}
-
-.text-box h2 {
-    margin-top: 0; /* Poistaa ylimääräisen marginaalin otsikosta */
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.text-box p {
-    margin: 10px 0 0 0; /* Poistaa ylimääräiset marginaalit */
-    color: #666;
-    font-size: 1rem;
-}
-
-/* Media query responsiivisuudelle */
-@media (max-width: 768px) {
-    .col {
-        margin-bottom: 15px; /* Lisää väliä kolumnien väliin pienillä näytöillä */
-    }
-}
