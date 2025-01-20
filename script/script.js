@@ -10,3 +10,11 @@ window.onscroll = function() {
         header.classList.remove('navbarDark');
     }
 }
+
+// Muutetaan navbarin avautumisliike
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.getElementById('navmenu');
+
+navbarToggler.addEventListener('click', () => {
+    navbarCollapse.classList.toggle('show');
+});
