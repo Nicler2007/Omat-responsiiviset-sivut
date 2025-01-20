@@ -48,10 +48,9 @@
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,
+.fa-youtube:hover,
 .fa-instagram:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover, 
+.fa-discord:hover, 
 .fa-twitch:hover {
     color: #fff;
 }
