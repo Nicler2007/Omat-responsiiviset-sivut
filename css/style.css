@@ -58,21 +58,56 @@
     color: #000000;
 }
 
+
+/* Yleiset kortti tyylit */
 .servicesText.card {
     height: 280px;
     cursor: pointer;
-  }
+    margin-bottom: 30px; /* Lisää väliä korttien alle */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Varmistaa, että teksti ja painike jakautuvat */
+    align-items: center;  /* Keskittää sisällön vaakasuunnassa */
+    height: 100%;  /* Varmistaa, että kortti täyttää koko korkeusalueen */
+}
+
+/* Ikonit */
 .servicesIcon {
     font-size: 36px;
     text-align: center;
     width: 100%;
 }
+
 .card-title {
     text-align: center;
 }
+
+/* Hover-efektit */
 .card:hover .servicesIcon {
-    color: #008000;
+    color: #d31730;
 }
+
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #d31730;
+}
+
+/* Pyöreä painike */
+.btn-round {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;  /* Tummanharmaa väri */
+    text-decoration: none;
+    border-radius: 50px;  /* Pyöreät kulmat */
+    border: 2px solid #333;  /* Tummanharmaa reunus */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;  /* Liukuminen hoverin aikana */
+}
+
+.btn-round:hover {
+    background-color: #333;  /* Tummanharmaa tausta hoverilla */
+    color: white;  /* Valkoinen teksti hoverilla */
 }
