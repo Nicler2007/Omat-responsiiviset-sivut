@@ -39,9 +39,13 @@
     width: 100%;
 }
 
+
+/*//////////////// Navbar ///////////////*/
 .navbarDark {
     background: #000;
 }
+
+
 
 .social-icons {
     font-size: 36px;

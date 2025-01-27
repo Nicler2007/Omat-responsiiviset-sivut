@@ -11,8 +11,14 @@
 
     <style>
 
+        body {
+            background-color:#000;
+            color: #fff;
+        }
+        
         .navbar {
             background-color: #000;
+            padding: 20px;
         }
 
         .Otsikko {
@@ -26,6 +32,19 @@
         margin-top: 4rem;
         padding-top: 4rem;
         }
+
+        .taulukko {
+            display: block;
+            padding: 50px 300px;
+            background-color: white;
+            color: #333;  /* Tummanharmaa väri */
+            text-decoration: none;
+            border-radius: 40px;  /* Pyöreät kulmat */
+            border: 10px solid #ff0000;  /* Tummanharmaa reunus */
+            font-weight: bold;
+        }
+
+
         .section:last-of-type {
             padding-bottom: 4rem;
         }
@@ -68,10 +87,10 @@
         .fa-instagram:hover,
         .fa-discord:hover, 
         .fa-twitch:hover {
-            color: #fff;
+            color: #ff0000;
         }
         .fab {
-            color: #000000;
+            color: #ffffff;
         }
 
 
@@ -131,7 +150,7 @@
 
         /* Hover-efekti painikkeelle */
         .btn-round:hover {
-            background-color: #333;  /* Tummanharmaa tausta hoverilla */
+            background-color: #ff0000;  /* Tummanharmaa tausta hoverilla */
             color: white;  /* Valkoinen teksti hoverilla */
         }
 
@@ -152,7 +171,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="Etusivu.html" class="nav-link"><i class="fas fa-home"></i>Takasin Etusivulle</a>
+                        <a href="Pelit.html" class="nav-link"><i class="fas fa-arrow-left"></i>Takasin</a>
                     </li>
             </div>
         </div>
@@ -169,46 +188,136 @@
         </div>
     </section>
     
-    <!-- about section -->
-    <section class="container mt-4 pt-4 section" id="about">
-        <h1 class="text-center">About Me</h1>
+    <!-- NHL 25 kohta -->
+    <section class="container mt-4 pt-4 section taulukko" id="about">
+        <h1 class="text-center">PM Headquarter NHL osio</h1>
         
         <div class="row mt-4">
             <div class="col-lg-6">
-                <img src="img/artificial-intelligence-7934483_1280.webp" class="image_about" alt="">
+                <img src="img/nhl-25 kuva 2.jpg" class="image_about" alt="">
             </div>
+            <div class="col-lg-6">
+                <img src="img/NHL_logo 3.png" class="image_about" alt="">
+            </div>
+            
 
             <div class="col-lg-6">
-                <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                <p>  Tervetuloa NHL 25 sivulle. Löydät tältä sivulta:
                     
                 </p>
                 <div class="row mt-3">
                     <div class="col-md-6">
                         <ul>
-                            <li>Windsurfing</li>
-                            <li>Mountain-climbing</li>
-                            <li>Brain-surgery</li>
+                            <li>Hockey Ultimate Team</li>
+                            <li>Peliseuraa (WOC)</li>
+                            <li>Turnaukset (kesken)</li>
 
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul>
-                            <li>Creative-writing</li>
-                            <li>Gymnastics</li>
-                            <li>Landscape painting</li>
+                            <li>NHL uutiset</li>
+                            <li>Keskustelua jääkiekkoon liittyvistä asioista</li>
 
                         </ul>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    <p>  * Tämä sivu tarjoaa kaikille jääkiekon faneille sisältöä (pyritään julkaisemaan uutisia reali ajassa). *
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+     <!-- Valikko 2-->
+     <section class="section" id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Mitä tahdot tehdä?</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/Ea nhl 25 woc.webp" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">YouTube Clone</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Quiz App</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage3.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Product Landing Page</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Messaging Service</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage1.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Twitter Clone</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Blog App</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 
 
@@ -289,96 +398,6 @@
 
 
 
-
-
-
-
-    <!-- Valikko 2-->
-    <section class="section" id="portfolio">
-        <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage1.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">YouTube Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Quiz App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage3.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Product Landing Page</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Messaging Service</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage1.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Twitter Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Blog App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
     
     <!-- footer section-->
     <footer class="container-fluid footer" id="footer">
