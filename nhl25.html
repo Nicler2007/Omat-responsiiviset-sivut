@@ -15,40 +15,6 @@
             background-color: #000;
         }
 
-        .navbar a {
-            color: white !important;
-        }
-
-        .text-box {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .text-box h2 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        .text-box p {
-            margin: 10px 0 0;
-            color: #666;
-            font-size: 1rem;
-        }
-
-        .card {
-            margin-top: 10px;
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-
         .Otsikko {
             background-color: rgba(255, 255, 255, 0.589); /* Vaalea taustaväri ja läpinäkyvyys */
             padding: 15px; /* Lisää tilaa tekstin ympärille */
@@ -56,15 +22,13 @@
             box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.1); /* Lisää varjo, jotta laatikko erottuu paremmin */
         }
 
-
         .section {
-            margin-top: 4rem;
-            padding-top: 4rem;
+        margin-top: 4rem;
+        padding-top: 4rem;
         }
         .section:last-of-type {
-                padding-bottom: 4rem;
+            padding-bottom: 4rem;
         }
-            
         /* hero background image */
         .bgimage {
             height:100vh;
@@ -74,13 +38,14 @@
             padding: 0;
             margin: 0;
         }
+
         /* text css above hero image*/
         .hero_title {
-            padding-top: 1.5rem;
-            font-size: 5rem;
+            padding-top: 10rem;
+            font-size: 4.5rem;
         }
         .hero_desc {
-            font-size: 2.0rem;
+            font-size: 2rem;
         }
         .hero_text {
             text-align: center;
@@ -109,25 +74,66 @@
             color: #000000;
         }
 
+
+        /* Yleiset kortti tyylit */
         .servicesText.card {
-            height: 280px;
+            height: 350px;
             cursor: pointer;
+            margin-bottom: 30px; /* Lisää väliä korttien alle */
         }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;  /* Varmistaa, että kortti täyttää koko korkeusalueen */
+            padding: 20px;  /* Lisätään hieman sisätilaa korttiin */
+            justify-content: space-between;  /* Asettaa sisällön tasaisesti kortin sisällä */
+            align-items: center;  /* Keskittää sisällön vaakasuunnassa */
+        }
+
+        /* Ikonit */
         .servicesIcon {
             font-size: 36px;
             text-align: center;
             width: 100%;
         }
+
         .card-title {
             text-align: center;
-        }
-        .card:hover .servicesIcon {
-            color: #008000;
-        }
-        .servicesText:hover {
-            border: 1px solid #008000;
+            margin-top: 15px;
         }
 
+        /* Hover-efektit */
+        .card:hover .servicesIcon {
+            color: #d31730;
+        }
+
+        .servicesText:hover {
+            border: 1px solid #d31730;
+        }
+
+        /* Pyöreä painike */
+        .btn-round {
+            display: inline-block;  /* Varmistaa, että painike on inline-block */
+            padding: 10px 20px;
+            background-color: white;
+            color: #333;  /* Tummanharmaa väri */
+            text-decoration: none;
+            border-radius: 50px;  /* Pyöreät kulmat */
+            border: 2px solid #333;  /* Tummanharmaa reunus */
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;  /* Liukuminen hoverin aikana */
+            width: 120px;  /* Poistetaan 100% leveys, jotta painike ei ole täysleveä */
+            height: 50px;  /* Käyttää sisällön korkeus */
+            margin-top: auto;  /* Asettaa painikkeen kortin alaosaan */
+            text-align: center;  /* Keskittää tekstin painikkeessa */
+        }
+
+        /* Hover-efekti painikkeelle */
+        .btn-round:hover {
+            background-color: #333;  /* Tummanharmaa tausta hoverilla */
+            color: white;  /* Valkoinen teksti hoverilla */
+        }
 
     </style>
 
@@ -143,7 +149,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a href="Etusivu.html" class="nav-link"><i class="fas fa-home"></i>Takasin Etusivulle</a>
@@ -205,82 +211,35 @@
 
 
 
-    <section class="p5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md">
-                    <div class="text-box">
-                        <h2>1</h2>
-                        <p>Tässä on toinen laatikko, jossa teksti on selkeästi erillään taustasta.</p>
-                        <div class="card bg-dark text-light">
-                            <div class="card-body text-center">
-                                <div class="h1 mb-3">
-                                    <i class="bi bi-controller"></i>
-                                </div>
-                            </div>
-                            <h3 class="card-title mb-3">1</h3>
-                            <a href="#" class="btn btn-danger">Lue lisää</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md">
-                    <div class="text-box">
-                        <h2>2</h2>
-                        <p>Tässä on toinen laatikko, jossa teksti on selkeästi erillään taustasta.</p>
-                        <div class="card bg-dark text-light">
-                            <div class="card-body text-center">
-                                <i class="bi bi-laptop"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md">
-                    <div class="text-box">
-                        <h2>3</h2>
-                        <p>Tässä on toinen laatikko, jossa teksti on selkeästi erillään taustasta.</p>
-                        <div class="card bg-dark text-light">
-                            <div class="card-body text-center">
-                                <i class="bi bi-laptop"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-
-
-
-
-
-    <!-- services section-->
+    <!-- Valikko -->
     <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
     <section class="container section" id="services">
-        <h1 class="text-center">Palvelut</h1>
+        <h1 class="text-center">PM Valikko</h1>
         <div class="row">
+
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
-                        <i class="fas servicesIcon fa-clock"></i>
-                        <h4 class="card-title mt-3">Website Development</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <i class="fas servicesIcon fa-book"></i>
+                        <h4 class="card-title mt-3">Ohjelmointikurssit</h4>
+                        <p class="card-text mt-3">Sivumme tarjoaa halukkaille ja innokkaille maksullisia ohjelmointikursseja. Kurssi sisältää ohjelmoinnin perusteet ja kun olet suorittanut perusteet pääset tutustumaan hieman monimutkaisempiin ohjelmointikieliin.
                         </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
                     </div>
                 </div>  
             </div>
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
-                        <i class='fas servicesIcon fa-layer-group'></i>
-                        <h4 class="card-title mt-3">Website Design</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <i class="fas servicesIcon fa-user-plus"></i>
+                        <h4 class="card-title mt-3">Uusia pelikavereita</h4>
+                        <p class="card-text mt-3">Etsitkö uusia pelikavereita tai tarvitsetko lisäystä johonkin peliporukkaan? Ei hätää täältä löydät nopeasti tarvitsemasi!
                         </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
                     </div>
                 </div>  
             </div>
@@ -288,56 +247,53 @@
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
-                        <i class='far servicesIcon fa-check-circle'></i>
-                        <h4 class="card-title mt-3">Website Deployment</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <i class="far servicesIcon fa-lightbulb"></i>
+                        <h4 class="card-title mt-3">Kokemuksia</h4>
+                        <p class="card-text mt-3">Oletko vailla kokemuksia tai vinkkejä? Täältä löydät vinkkejä ja kokemuksia joita voit hyödyntää ja käyttää (Jos olet parempi oppimaan visuaalisesti tämä on oikea paikka).
                         </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
                     </div>
                 </div>  
             </div>
-        </div>
-
-        <div class="row">
+        
+        
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
-                        <i class='fas servicesIcon fa-search'></i>
-                        <h4 class="card-title mt-3">SEO</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <i class="fas servicesIcon fa-trophy"></i>
+                        <h4 class="card-title mt-3">Pelikeskustelut</h4>
+                        <p class="card-text mt-3">Haluatko rupatella ja kertoa omia näkemyksiäsi peleistä tai vaikka peliuutisista. Voit keskustella peleistä ja jakaa omista ajatuksista muiden kanssa, muistathan asiallisen käyttäytymisen!!! Täältä löydät tarvitsemasi
                         </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
                     </div>
-                </div>  
+                </div>
             </div>
-
+        
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
-                        <i class='fas servicesIcon fa-shield-alt'></i>
-                        <h4 class="card-title mt-3">DevOps</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-wrench'></i>
+                        <i class="fas servicesIcon fa-wrench"></i>
                         <h4 class="card-title mt-3">QA</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <p class="card-text mt-3">Tänne voit ilmoittaa sivujen bugeista tai ehdottaa jotain ideoita!
                         </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
                     </div>
                 </div>  
             </div>
         </div>
     </section>
 
-    <!-- portfolio section-->
+
+
+
+
+
+
+
+    <!-- Valikko 2-->
     <section class="section" id="portfolio">
         <div class="container mt-3">
             <h1 class="text-center">Portfolio</h1>
@@ -441,5 +397,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
