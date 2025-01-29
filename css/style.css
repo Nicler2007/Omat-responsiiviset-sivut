@@ -1,6 +1,11 @@
 
 /* Tyylit sivuille */
 
+body::before {
+    display: block;
+    content: '';
+}
+
 .section {
     margin-top: 4rem;
     padding-top: 4rem;
@@ -41,9 +46,6 @@
 
 
 /*//////////////// Navbar ///////////////*/
-.navbarDark {
-    background: #000;
-}
 
 
 
@@ -120,4 +122,12 @@
 .btn-round:hover {
     background-color: #333;  /* Tummanharmaa tausta hoverilla */
     color: white;  /* Valkoinen teksti hoverilla */
+}
+
+
+/* kurssit input */
+@media(min-width: 768px) {
+    .kurssit-input {
+        width: 50%;
+    }
 }
