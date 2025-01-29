@@ -48,7 +48,6 @@ body::before {
 /*//////////////// Navbar ///////////////*/
 
 
-
 .social-icons {
     font-size: 36px;
     cursor: pointer;
@@ -125,6 +124,12 @@ body::before {
 }
 
 
+@media (max-width: 768px) {
+    .painike {
+        margin-left: auto;
+        margin-right: auto; /* Keskittää painikkeen mobiilissa */
+    }
+}
 /* kurssit input */
 @media(min-width: 768px) {
     .kurssit-input {
