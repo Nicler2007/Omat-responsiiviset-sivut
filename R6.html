@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R6 Lisätietoja</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+
+        body {
+            background-color:#ffffff;
+            color: #000000;
+        }
+        
+        .navbar {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .Otsikko {
+            background-color: rgba(44, 36, 36, 0.589);
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: -80px; /* Siirtää ylöspäin */
+        }
+
+        /* Mobiilinäkymä (max-width 768px eli tabletit ja pienemmät) */
+        @media (max-width: 768px) {
+            .Otsikko {
+                top: -10px; /* Siirtää vähemmän ylöspäin pienemmillä näytöillä */
+                padding: 10px; /* Pienempi padding mobiilissa */
+                font-size: 16px; /* Pienempi fontti mobiilissa */
+            }
+        }
+
+        /* Pienet mobiilinäytöt (max-width 480px) */
+        @media (max-width: 480px) {
+            .Otsikko {
+                top: -5px; /* Vielä vähemmän siirtymää */
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        .section {
+            margin-top: 4rem;
+            padding-top: 4rem;
+        }
+
+        .image_about {
+            width: 100%; /* Skaalaa kuvat täyttämään sarake */
+            height: auto; /* Säilyttää kuvasuhteen */
+        }
+
+        
+        /* Pienemmillä näytöillä teksti keskelle */
+        @media (max-width: 768px) {
+            .text-md-end {
+                text-align: center !important;
+            }
+        }
+        
+
+
+        .section:last-of-type {
+            padding-bottom: 4rem;
+        }
+
+
+        /* hero background image */
+        .bgimage {
+            height:100vh;
+            background: url('https://www.suomiesports.fi/wp-content/uploads/2021/01/r6s.jpg');
+            background-size:cover;
+            position:relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* text css above hero image*/
+        .hero_title {
+            padding-top: 10rem;
+            font-size: 4.5rem;
+        }
+        .hero_desc {
+            font-size: 2rem;
+        }
+        .hero_text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        
+        .social-icons {
+            font-size: 36px;
+            cursor: pointer;
+        }
+        .fa-youtube:hover,
+        .fa-instagram:hover,
+        .fa-discord:hover, 
+        .fa-twitch:hover {
+            color: #ff0000;
+        }
+        .fab {
+            color: #000000;
+        }
+
+
+        /* Yleiset kortti tyylit */
+        .servicesText.card {
+            height: 350px;
+            cursor: pointer;
+            margin-bottom: 30px; /* Lisää väliä korttien alle */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;  /* Varmistaa, että kortti täyttää koko korkeusalueen */
+            padding: 20px;  /* Lisätään hieman sisätilaa korttiin */
+            justify-content: space-between;  /* Asettaa sisällön tasaisesti kortin sisällä */
+            align-items: center;  /* Keskittää sisällön vaakasuunnassa */
+        }
+
+        /* Ikonit */
+        .servicesIcon {
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-title {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Hover-efektit */
+        .card:hover .servicesIcon {
+            color: #d31730;
+        }
+
+        .servicesText:hover {
+            border: 1px solid #d31730;
+        }
+
+        /* Pyöreä painike */
+        .btn-round {
+            display: inline-block;  /* Varmistaa, että painike on inline-block */
+            padding: 10px 20px;
+            background-color: white;
+            color: #333;  /* Tummanharmaa väri */
+            text-decoration: none;
+            border-radius: 50px;  /* Pyöreät kulmat */
+            border: 2px solid #333;  /* Tummanharmaa reunus */
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;  /* Liukuminen hoverin aikana */
+            width: 120px;  /* Poistetaan 100% leveys, jotta painike ei ole täysleveä */
+            height: 50px;  /* Käyttää sisällön korkeus */
+            margin-top: auto;  /* Asettaa painikkeen kortin alaosaan */
+            text-align: center;  /* Keskittää tekstin painikkeessa */
+        }
+
+        /* Hover-efekti painikkeelle */
+        .btn-round:hover {
+            background-color: #ff0000;  /* Tummanharmaa tausta hoverilla */
+            color: white;  /* Valkoinen teksti hoverilla */
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href=""></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="Pelit.html" class="nav-link"><i class="fas fa-arrow-left"></i>Takasin</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+        
+    <!-- main banner -->
+    <section class="container-fluid section bgimage" id="home">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text">
+                <h2 class="hero_title Otsikko text-white">Tämä on Rainbow six siege 6 osio</h2>
+                <p class="hero_desc Otsikko text-white">Täältä löydät R6 koskevia asioita</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- R6 osio -->
+    <section class="container mt-4 pt-4 section text-center" id="about">
+        <h1 class="text-center">Tervetuloa PM Headquarter R6 osioon</h1>
+        
+        <!-- Lead teksti -->
+        <p class="lead">Tämä osio on omistettu kaikille R6-faneille, jotka haluavat pysyä ajan tasalla pelin uutisista, turnauksista ja muista tärkeistä asioista. Liity mukaan ja löydä peliseuraa, strategioita ja paljon muuta!</p>
+        
+        <div class="row mt-4 align-items-center">
+            <!-- Tekstin sarake (nyt vasemmalla) -->
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <h2> Rainbow six siege 6</h2>
+                
+                <div class="row mt-3">
+                    <p> Rainbow Six Siege on taktinen moninpeli, joka keskittyy tiimipohjaiseen pelaamiseen ja strategiseen suunnitteluun. 
+                        Se on Ubisoftin kehittämä ja julkaisema, ja se kuuluu first-person shooter (FPS) -pelien genreen. 
+                        Peli julkaistiin alun perin vuonna 2015, ja se on saanut jatkuvaa päivitystä ja tukea vuosien varrella.</p>
+                </div>
+
+                <div class="row mt-3">
+                    <p> Rainbow Six Siege keskittyy intensiivisiin, tiimipohjaisiin taisteluihin, joissa pelaajat ottavat rooleja erikoisjoukkojen jäseninä eri puolilta maailmaa. 
+                        Peli koostuu pääasiassa 5v5-otteluista, joissa yksi tiimi puolustaa ja toinen hyökkää. 
+                        Tavoitteena on esimerkiksi suojella alueita, estää pommin asettaminen tai pelastaa panttivankeja.</p>
+                </div>
+                
+                <div class="row mt-3">
+                    <p>* (pyritään julkaisemaan sisältöä realiajassa!). *</p>
+                </div>
+            </div>
+
+            <!-- Kuvien sarake (nyt oikealla) -->
+            <div class="col-md-6 col-12 d-flex flex-column align-items-center">
+                <img src="img/R6 kuva 2.webp" class="image_about mb-3 img-fluid" alt="NHL 25">
+            </div>
+        </div>
+
+
+
+
+        <div class="row mt-3">
+            <!-- Tekstin sarake (nyt vasemmalla) -->
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <ul>
+                    <li><strong>Pelin realistisuus ja strategisuus:</strong> Peli ei ole vain nopeatempoista ammuntaa, vaan se tarjoaa syvällisen ja monivaiheisen pelikokemuksen. 
+                        Pelaajat voivat valita eri pelityylejä, ja pelin ympäristö antaa mahdollisuuden kekseliäisyyteen ja strategiseen ajatteluun.</li>
+                    <li><strong>Kilpailullisuus:</strong> Peli tarjoaa jännittäviä kilpailullisia otteluita, ja se on suosittu erityisesti esports-pelaajien keskuudessa. 
+                        Peli tarjoaa myös runsaasti mahdollisuuksia pelissä kehittymiseen ja tiimiyhteistyön parantamiseen.</li>
+                    <li>Pelitaito ja oppimiskäyrä: Aluksi peli voi olla haastavaa, mutta sen monimuotoisuus ja syvyys tekevät siitä koukuttavan pitkällä aikavälillä.</li>
+                </ul>
+            </div>
+        </div>
+    
+
+
+        <!-- Seuraava kohta, jossa oikealla kuva ja vasemmalla 'kuva 2' -->
+        <div class="row mt-4 align-items-center">
+            <!-- Kuvien sarake (nyt vasemmalla) -->
+            <div class="col-md-6 col-12 d-flex flex-column align-items-center">
+                <img src="img/R6 kuva 3.webp" class="image_about mb-3 img-fluid" alt="NHL Logo">
+            </div>
+    
+            <!-- Tekstin sarake (nyt oikealla) -->
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <p> Tervetuloa NHL 25 sivulle. Tässä toinen osio, jossa puhumme enemmän pelistä ja sen eri osista. Seuraavat elementit tulevat liittymään siihen, mitä voit odottaa tästä osasta:</p>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6 col-12">
+                        <ul>
+                            <li>Pelimekaniikat</li>
+                            <li>Strategiat</li>
+                            <li>Parhaat pelivinkit</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <ul>
+                            <li>Turnaustiedot</li>
+                            <li>Pelin haasteet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Rainbow Six Siege osio -->
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <h2>Rainbow Six Siege</h2>
+            </div>
+        </div>
+    
+        <div class="row mt-3">
+            <!-- Tekstin sarake (nyt vasemmalla) -->
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <ul>
+                    <li>Peliuutiset</li>
+                    <li>Peliseuraa</li>
+                    <li>Turnaukset (kesken)</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <ul>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+
+
+     <!-- Valikko 2-->
+    <section class="section" id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Mitä tahdot tehdä?</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/Ea nhl 25 woc.webp" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">World of chel</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage4.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Quiz App</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage3.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Product Landing Page</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br>
+    </section>
+
+
+
+
+    <!-- Valikko -->
+    <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
+    <section class="container section" id="services">
+        <h1 class="text-center">PM Valikko</h1>
+        <div class="row">
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-book"></i>
+                        <h4 class="card-title mt-3">Ohjelmointikurssit</h4>
+                        <p class="card-text mt-3">Sivumme tarjoaa halukkaille ja innokkaille maksullisia ohjelmointikursseja. Kurssi sisältää ohjelmoinnin perusteet ja kun olet suorittanut perusteet pääset tutustumaan hieman monimutkaisempiin ohjelmointikieliin.
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-user-plus"></i>
+                        <h4 class="card-title mt-3">Uusia pelikavereita</h4>
+                        <p class="card-text mt-3">Etsitkö uusia pelikavereita tai tarvitsetko lisäystä johonkin peliporukkaan? Ei hätää täältä löydät nopeasti tarvitsemasi!
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="far servicesIcon fa-lightbulb"></i>
+                        <h4 class="card-title mt-3">Kokemuksia</h4>
+                        <p class="card-text mt-3">Oletko vailla kokemuksia tai vinkkejä? Täältä löydät vinkkejä ja kokemuksia joita voit hyödyntää ja käyttää (Jos olet parempi oppimaan visuaalisesti tämä on oikea paikka).
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+        
+        
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-trophy"></i>
+                        <h4 class="card-title mt-3">Pelikeskustelut</h4>
+                        <p class="card-text mt-3">Haluatko rupatella ja kertoa omia näkemyksiäsi peleistä tai vaikka peliuutisista. Voit keskustella peleistä ja jakaa omista ajatuksista muiden kanssa, muistathan asiallisen käyttäytymisen!!! Täältä löydät tarvitsemasi
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-wrench"></i>
+                        <h4 class="card-title mt-3">QA</h4>
+                        <p class="card-text mt-3">Tänne voit ilmoittaa sivujen bugeista tai ehdottaa jotain ideoita!
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+    <!-- footer section-->
+    <footer class="container-fluid footer" id="footer">
+        <!-- social media icons -->
+        <div class="social-icons mt-4">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://discord.com/invite/GHzU4QCh" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+        
+        <div class="bg-dark text-white text-center py-3">
+            <p>&copy; 2025 Omat sivut | Tekijä: Nico Hede</p>
+        </div>
+
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
