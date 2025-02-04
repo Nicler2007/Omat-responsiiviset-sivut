@@ -1,0 +1,317 @@
+
+
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Of War Lisätietoja</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+
+        body {
+            background-color:#ffffff;
+            color: #000000;
+        }
+        
+        .navbar {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .Otsikko {
+            background-color: rgba(255, 255, 255, 0.589); /* Vaalea taustaväri ja läpinäkyvyys */
+            padding: 15px; /* Lisää tilaa tekstin ympärille */
+            border-radius: 10px; /* Pyöristää laatikon kulmat */
+            box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.1); /* Lisää varjo, jotta laatikko erottuu paremmin */
+        }
+
+        .section {
+            margin-top: 4rem;
+            padding-top: 4rem;
+        }
+
+        .taulukko {
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 5px solid #ff0000;
+            font-weight: bold;
+            padding: 30px; /* Poistettu kiinteät arvot */
+        }
+
+
+        .image_about {
+            width: 100%; /* Skaalaa kuvat täyttämään sarake */
+            height: auto; /* Säilyttää kuvasuhteen */
+        }
+
+        
+        /* Pienemmillä näytöillä teksti keskelle */
+        @media (max-width: 768px) {
+            .text-md-end {
+                text-align: center !important;
+            }
+        }
+        
+
+
+        .section:last-of-type {
+            padding-bottom: 4rem;
+        }
+
+
+        /* hero background image */
+        .bgimage {
+            height:100vh;
+            background: url('https://ew.com/thmb/4lmLC5Ark8X7GwPpaATjk738Xao=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/god-of-war-2018-2000-408387a68b78478aaa52d04b8a99c0a0.jpg');
+            background-size:cover;
+            position:relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* text css above hero image*/
+        .hero_title {
+            padding-top: 10rem;
+            font-size: 4.5rem;
+        }
+        .hero_desc {
+            font-size: 2rem;
+        }
+        .hero_text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        
+        .social-icons {
+            font-size: 36px;
+            cursor: pointer;
+        }
+        .fa-youtube:hover,
+        .fa-instagram:hover,
+        .fa-discord:hover, 
+        .fa-twitch:hover {
+            color: #ffffff;
+        }
+        .fab {
+            color: #000000;
+        }
+
+
+        /* Yleiset kortti tyylit */
+        .servicesText.card {
+            height: 350px;
+            cursor: pointer;
+            margin-bottom: 30px; /* Lisää väliä korttien alle */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;  /* Varmistaa, että kortti täyttää koko korkeusalueen */
+            padding: 20px;  /* Lisätään hieman sisätilaa korttiin */
+            justify-content: space-between;  /* Asettaa sisällön tasaisesti kortin sisällä */
+            align-items: center;  /* Keskittää sisällön vaakasuunnassa */
+        }
+
+        /* Ikonit */
+        .servicesIcon {
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-title {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Hover-efektit */
+        .card:hover .servicesIcon {
+            color: #d31730;
+        }
+
+        .servicesText:hover {
+            border: 1px solid #d31730;
+        }
+
+        /* Pyöreä painike */
+        .btn-round {
+            display: inline-block;  /* Varmistaa, että painike on inline-block */
+            padding: 10px 20px;
+            background-color: white;
+            color: #333;  /* Tummanharmaa väri */
+            text-decoration: none;
+            border-radius: 50px;  /* Pyöreät kulmat */
+            border: 2px solid #333;  /* Tummanharmaa reunus */
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;  /* Liukuminen hoverin aikana */
+            width: 120px;  /* Poistetaan 100% leveys, jotta painike ei ole täysleveä */
+            height: 50px;  /* Käyttää sisällön korkeus */
+            margin-top: auto;  /* Asettaa painikkeen kortin alaosaan */
+            text-align: center;  /* Keskittää tekstin painikkeessa */
+        }
+
+        /* Hover-efekti painikkeelle */
+        .btn-round:hover {
+            background-color: #ff0000;  /* Tummanharmaa tausta hoverilla */
+            color: white;  /* Valkoinen teksti hoverilla */
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href=""></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="Pelit.html" class="nav-link"><i class="fas fa-arrow-left"></i>Takasin</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+        
+    <!-- main banner -->
+    <section class="container-fluid section bgimage" id="home">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text">
+                <h2 class="hero_title Otsikko text-dark">Tämä on God of war osio</h2>
+                <p class="hero_desc Otsikko text-dark">Täältä löydät Gow koskevia asioita</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="container mt-4 pt-4r">
+        <h2>Ideat sivulle (Kesken)</h2>
+
+        <div class="">
+            <ul>
+                <li>Pelivinkit</li>
+                <li>Platina ohje</li>
+                <li>Pelikeskustelua</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Valikko -->
+    <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
+    <section class="container section" id="services">
+        <h1 class="text-center">PM Valikko</h1>
+        <div class="row">
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-book"></i>
+                        <h4 class="card-title mt-3">Ohjelmointikurssit</h4>
+                        <p class="card-text mt-3">Sivumme tarjoaa halukkaille ja innokkaille maksullisia ohjelmointikursseja. Kurssi sisältää ohjelmoinnin perusteet ja kun olet suorittanut perusteet pääset tutustumaan hieman monimutkaisempiin ohjelmointikieliin.
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-user-plus"></i>
+                        <h4 class="card-title mt-3">Uusia pelikavereita</h4>
+                        <p class="card-text mt-3">Etsitkö uusia pelikavereita tai tarvitsetko lisäystä johonkin peliporukkaan? Ei hätää täältä löydät nopeasti tarvitsemasi!
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="far servicesIcon fa-lightbulb"></i>
+                        <h4 class="card-title mt-3">Kokemuksia</h4>
+                        <p class="card-text mt-3">Oletko vailla kokemuksia tai vinkkejä? Täältä löydät vinkkejä ja kokemuksia joita voit hyödyntää ja käyttää (Jos olet parempi oppimaan visuaalisesti tämä on oikea paikka).
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+        
+        
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-trophy"></i>
+                        <h4 class="card-title mt-3">Pelikeskustelut</h4>
+                        <p class="card-text mt-3">Haluatko rupatella ja kertoa omia näkemyksiäsi peleistä tai vaikka peliuutisista. Voit keskustella peleistä ja jakaa omista ajatuksista muiden kanssa, muistathan asiallisen käyttäytymisen!!! Täältä löydät tarvitsemasi
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-wrench"></i>
+                        <h4 class="card-title mt-3">QA</h4>
+                        <p class="card-text mt-3">Tänne voit ilmoittaa sivujen bugeista tai ehdottaa jotain ideoita!
+                        </p>
+                        <!-- Lisää pyöreä linkki painike -->
+                        <a href="#" class="btn-round">Lue lisää</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+    <!-- footer section-->
+    <footer class="container-fluid footer" id="footer">
+        <!-- social media icons -->
+        <div class="social-icons mt-4">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://discord.com/invite/GHzU4QCh" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+        
+        <div class="bg-dark text-white text-center py-3">
+            <p>&copy; 2025 Omat sivut | Tekijä: Nico Hede</p>
+        </div>
+
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
