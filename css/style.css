@@ -56,7 +56,83 @@ body::before {
 
 
 
+
+
 /*//////////////// Navbar ///////////////*/
+
+/* Mobiilin off-canvas menu */
+@media (max-width: 991px) {
+    .offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -30%; /* Piilossa aluksi */
+    width: 30%;
+    height: auto;
+    max-height: 350px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 80px 10px;
+    transition: 0.4s;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    }
+
+    /* Kun menu on auki */
+    .offcanvas-menu.open {
+        left: 0;
+    }
+
+    /* Linkkien tyylit */
+    .offcanvas-menu .nav-link {
+        color: white;
+        padding: 10px 15px;
+        font-size: 18px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .offcanvas-menu .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    /* Sulkemispainike */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Overlay-efekti (vain mobiilissa) */
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 500;
+    }
+
+    /* Overlay näkyväksi kun menu auki */
+    #overlay.active {
+        display: block;
+    }
+}
+
+/* Desktopin navbarin näkyvyys */
+@media (min-width: 992px) {
+    .offcanvas-menu, #overlay {
+        display: none !important;
+    }
+}
+
+
 
 
 
