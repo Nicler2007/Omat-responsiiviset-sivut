@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilamuunnin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 60px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .unit-selects {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .arrow {
+            font-size: 25px;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* Navbar-styling */
+        .navbar {
+            width: 100%;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand"></a> <!-- Jättää tilaa logolle jos tarvitaan -->
+            <a class="navbar-brand" href="projektit.html">Takaisin</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <h1>Lämpötilamuunnin</h1>
+            <label for="temp">Syötä lämpötila:</label>
+            <input type="number" id="temp" placeholder="Lämpötila">
+            <div class="unit-selects">
+                <div>
+                    <label for="fromUnit">Valitse yksikkö:</label>
+                    <select id="fromUnit">
+                        <option value="Celsius">Celsius (°C)</option>
+                        <option value="Fahrenheit">Fahrenheit (°F)</option>
+                        <option value="Kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+                <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                <div>
+                    <label for="toUnit">Yksikkö johon haluat muuntaa:</label>
+                    <select id="toUnit">
+                        <option value="Celsius">Celsius (°C)</option>
+                        <option value="Fahrenheit">Fahrenheit (°F)</option>
+                        <option value="Kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="convertTemperature()">Muunna</button>
+            <div class="result hidden" id="result"></div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

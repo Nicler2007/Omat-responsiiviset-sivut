@@ -55,6 +55,55 @@ body::before {
 }
 
 
+  /* ISO PUNAINEN NAPPULA "Paina tästä" */
+.button-container {
+    display: flex;
+    justify-content: center; /* Vaakasuora keskitus */
+    align-items: center; /* Pystysuora keskitus */
+    height: 40vh; /* Täyttää koko näytön korkeuden */
+  }
+  
+/* Poistetaan linkin oletustyylit */
+.button-link {
+    text-decoration: none; /* Poistaa alaviivan */
+  }
+  
+  /* Isompi painike */
+  button {
+    background-color: #ff4d4d; /* Punainen taustaväri */
+    color: white; /* Valkoinen teksti */
+    border: 2px solid #ff4d4d; /* Punainen reunus */
+    padding: 30px 60px; /* Suuremmat sisätilat (tekee painikkeesta isomman) */
+    font-size: 24px; /* Suurempi fonttikoko */
+    cursor: pointer;
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    transition: all 0.3s ease; /* Pehmeä siirtymä hover-tilaan */
+    
+    animation: pulse 1.5s infinite; /* Pulssittava efekti */
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6); /* Pehmeä varjo */
+  }
+  
+  /* Animaatio: Pulssittava efekti */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+    }
+    50% {
+      transform: scale(1.05); /* Suurentaa hieman */
+      box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); /* Kirkastaa varjoa */
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+    }
+  }
+  
+  /* Hover-tila, jossa painike kasvaa hieman */
+  button:hover {
+    transform: scale(1.1); /* Kasvatus hoverissa */
+  }
+
 
 
 
