@@ -1,5 +1,6 @@
 
 
+// tässä uutiset-sivuille javaS versio nav barille (ehdotus)!
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
@@ -22,4 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.remove("active");
     });
 });
+
+// <---> //
+
 
