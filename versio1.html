@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaverilista-JS Versio1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+        }
+        #friend-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 5px auto;
+            width: 300px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+        <div class="container d-flex flex-column">
+            <!-- Rivi 1: Takaisin-linkki oikealle -->
+            <div class="d-flex justify-content-end w-100">
+                <a class="navbar-brand" href="projektit.html">Takaisin</a>
+            </div>
+    
+            <!-- Rivi 2: Versio 1 ja Versio 2 keskelle -->
+            <div class="d-flex justify-content-center w-100 mt-2">
+                <a class="nav-link text-white mx-3" href="versio1.html">Versio 1</a>
+                <a class="nav-link text-white mx-3" href="versio2.html">Versio 2</a>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <section class="container py-5">
+        <h1 class="text-center"><strong>Kaverilista-JS versio1<strong></h1>
+        
+        <div id="projekti1" class="my-5">
+            <h2 class="p-4">Kaverilista-Peli</h2>
+            <div class="container">
+                <h1>Syötä 10 kaverin nimi</h1>
+                <p>Syötä nimi ja paina "Lisää" jatkaaksesi!</p>
+        
+                <input type="text" id="nameInput" placeholder="Syötä kaverin nimi">
+                <button onclick="addFriend()">Lisää kaveri</button>
+        
+                <div id="friend-list" class="friend-list"></div>
+                <div id="gameStatus" class="game-over"></div>
+            </div>
+        </div>
+
+    <script src="js/versio1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
